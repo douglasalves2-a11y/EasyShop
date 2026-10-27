@@ -1,0 +1,19 @@
+﻿# Arquivos de compilacao
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Configuracoes locais
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db

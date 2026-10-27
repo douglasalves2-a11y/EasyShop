@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="EasyShop.MainPage"
+          Title="EasyShop"
+          BackgroundColor="#F4F6F9">
+<ScrollView>
+    <VerticalStackLayout Padding="24" Spacing="20">
+
+        <Label Text="EasyShop"
+               FontSize="32"
+               FontAttributes="Bold"
+               TextColor="#183153"
+               HorizontalOptions="Center"
+               Margin="0,30,0,0" />
+
+        <Label Text="Sua loja, organizada e inteligente!"
+               FontSize="16"
+               TextColor="#5D6D7E"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center" />
+
+        <Border BackgroundColor="White"
+                Stroke="#DCE3EB"
+                StrokeThickness="1"
+                Padding="20"
+                StrokeShape="RoundRectangle 16">
+
+            <VerticalStackLayout Spacing="12">
+                <Label Text="Cadastro de Clientes"
+                       FontSize="21"
+                       FontAttributes="Bold"
+                       TextColor="#183153" />
+
+                <Label Text="Gerencie clientes usando o banco relacional SQLite."
+                       FontSize="14"
+                       TextColor="#5D6D7E" />
+
+                <Button Text="Acessar Clientes"
+                        BackgroundColor="#2463EB"
+                        TextColor="White"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        Clicked="OnCustomersClicked" />
+            </VerticalStackLayout>
+        </Border>
+
+        <Border BackgroundColor="White"
+                Stroke="#DCE3EB"
+                StrokeThickness="1"
+                Padding="20"
+                StrokeShape="RoundRectangle 16">
+
+            <VerticalStackLayout Spacing="12">
+                <Label Text="Catálogo de Produtos"
+                       FontSize="21"
+                       FontAttributes="Bold"
+                       TextColor="#183153" />
+
+                <Label Text="Gerencie produtos, preços, estoque e categorias usando o LiteDB."
+                       FontSize="14"
+                       TextColor="#5D6D7E" />
+
+                <Button Text="Acessar Produtos"
+                        BackgroundColor="#16865B"
+                        TextColor="White"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        Clicked="OnProductsClicked" />
+            </VerticalStackLayout>
+        </Border>
+
+        <Border BackgroundColor="#E8EEF8"
+                StrokeThickness="0"
+                Padding="16"
+                StrokeShape="RoundRectangle 12">
+
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Arquitetura Poliglota"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="#183153" />
+
+                <Label Text="SQL: SQLite — cadastro de clientes."
+                       FontSize="14"
+                       TextColor="#183153" />
+
+                <Label Text="NoSQL: LiteDB — catálogo de produtos."
+                       FontSize="14"
+                       TextColor="#183153" />
+
+                <Label Text="Camadas: Models, Data, Services, ViewModels e Views."
+                       FontSize="14"
+                       TextColor="#183153" />
+            </VerticalStackLayout>
+        </Border>
+
+        <Label Text="Projeto acadêmico • EasyShop"
+               FontSize="12"
+               TextColor="#85929E"
+               HorizontalOptions="Center"
+               Margin="0,0,0,20" />
+
+    </VerticalStackLayout>
+</ScrollView>
+</ContentPage>
+
