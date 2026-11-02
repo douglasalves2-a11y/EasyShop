@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyShop.Views.ProductsPage"
+             Title="Produtos"
+             BackgroundColor="#F4F6F9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="Catálogo de Produtos"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   TextColor="#183153" />
+
+            <Label Text="Os produtos serão armazenados localmente no LiteDB."
+                   FontSize="14"
+                   TextColor="#5D6D7E" />
+
+            <Border BackgroundColor="White"
+                    Stroke="#DCE3EB"
+                    StrokeThickness="1"
+                    Padding="16"
+                    StrokeShape="RoundRectangle 14">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Entry x:Name="NameEntry"
+                           Placeholder="Nome do produto" />
+
+                    <Entry x:Name="DescriptionEntry"
+                           Placeholder="Descrição" />
+
+                    <Entry x:Name="CategoryEntry"
+                           Placeholder="Categoria" />
+
+                    <Entry x:Name="PriceEntry"
+                           Placeholder="Preço (ex.: 29,90)"
+                           Keyboard="Numeric" />
+
+                    <Entry x:Name="StockEntry"
+                           Placeholder="Quantidade em estoque"
+                           Keyboard="Numeric" />
+
+                    <Entry x:Name="TagsEntry"
+                           Placeholder="Tags separadas por vírgula" />
+
+                    <Button x:Name="SaveProductButton"
+                            Text="Cadastrar produto"
+                            BackgroundColor="#16865B"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HeightRequest="48"
+                            Clicked="OnSaveProductClicked" />
+
+                    <Button x:Name="CancelEditButton"
+                            Text="Cancelar edição"
+                            BackgroundColor="#85929E"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HeightRequest="44"
+                            IsVisible="False"
+                            Clicked="OnCancelEditClicked" />
+
+                    <Button Text="Atualizar listagem"
+                            BackgroundColor="#E8EEF8"
+                            TextColor="#183153"
+                            CornerRadius="10"
+                            HeightRequest="44"
+                            Clicked="OnRefreshClicked" />
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Label Text="Produtos cadastrados"
+                   FontSize="21"
+                   FontAttributes="Bold"
+                   TextColor="#183153" />
+
+            <VerticalStackLayout x:Name="ProductsList"
+                                 Spacing="10" />
+
+            <Label x:Name="EmptyMessage"
+                   Text="Nenhum produto cadastrado."
+                   FontSize="14"
+                   TextColor="#85929E"
+                   HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyShop.Views.CustomersPage"
+             Title="Clientes"
+             BackgroundColor="#F4F6F9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="Cadastro de Clientes"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   TextColor="#183153" />
+
+            <Label Text="Os dados serão armazenados localmente no SQLite."
+                   FontSize="14"
+                   TextColor="#5D6D7E" />
+
+            <Border BackgroundColor="White"
+                    Stroke="#DCE3EB"
+                    StrokeThickness="1"
+                    Padding="16"
+                    StrokeShape="RoundRectangle 14">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Entry x:Name="NameEntry"
+                           Placeholder="Nome completo"
+                           ClearButtonVisibility="WhileEditing" />
+
+                    <Entry x:Name="EmailEntry"
+                           Placeholder="E-mail"
+                           Keyboard="Email"
+                           ClearButtonVisibility="WhileEditing" />
+
+                    <Entry x:Name="PhoneEntry"
+                           Placeholder="Telefone"
+                           Keyboard="Telephone"
+                           ClearButtonVisibility="WhileEditing" />
+
+                    <Button x:Name="SaveCustomerButton"
+                            Text="Cadastrar cliente"
+                            BackgroundColor="#2463EB"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HeightRequest="48"
+                            Clicked="OnAddCustomerClicked" />
+
+                    <Button x:Name="CancelEditButton"
+                            Text="Cancelar edição"
+                            BackgroundColor="#85929E"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HeightRequest="44"
+                            IsVisible="False"
+                            Clicked="OnCancelEditClicked" />
+
+                    <Button Text="Atualizar listagem"
+                            BackgroundColor="#E8EEF8"
+                            TextColor="#183153"
+                            CornerRadius="10"
+                            HeightRequest="44"
+                            Clicked="OnRefreshClicked" />
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Label Text="Clientes cadastrados"
+                   FontSize="21"
+                   FontAttributes="Bold"
+                   TextColor="#183153" />
+
+            <VerticalStackLayout x:Name="CustomersList"
+                                 Spacing="10" />
+
+            <Label x:Name="EmptyMessage"
+                   Text="Nenhum cliente cadastrado."
+                   FontSize="14"
+                   TextColor="#85929E"
+                   HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

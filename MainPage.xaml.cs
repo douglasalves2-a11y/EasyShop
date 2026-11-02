@@ -1,4 +1,6 @@
-﻿namespace EasyShop;
+﻿using EasyShop.Views;
+
+namespace EasyShop;
 
 public partial class MainPage : ContentPage
 {
@@ -7,21 +9,18 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
-    private async void OnCustomersClicked(object sender, EventArgs e)
+    private async void OnCustomersClicked(object? sender, EventArgs e)
     {
-        await DisplayAlert(
-            "Clientes",
-            "A tela de cadastro de clientes será implementada na próxima etapa.",
-            "OK"
-        );
+        await Shell.Current.GoToAsync(nameof(CustomersPage));
     }
 
-    private async void OnProductsClicked(object sender, EventArgs e)
+    private async void OnProductsClicked(object? sender, EventArgs e)
     {
-        await DisplayAlert(
-            "Produtos",
-            "A tela do catálogo de produtos será implementada na próxima etapa.",
-            "OK"
-        );
+        await Shell.Current.GoToAsync(nameof(ProductsPage));
+    }
+
+    private async void OnSalesClicked(object? sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(SalesPage));
     }
 }

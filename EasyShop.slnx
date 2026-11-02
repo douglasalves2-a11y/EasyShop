@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="EasyShop.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>

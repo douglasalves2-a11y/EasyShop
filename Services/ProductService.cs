@@ -90,4 +90,12 @@ public class ProductService
         if (product.Tags is null)
             product.Tags = new List<string>();
     }
+public void ApplyStockChanges(Dictionary<int, int> stockChanges)
+{
+    _repository.ApplyStockChanges(stockChanges);
+}
+public bool ApplySaleStockMovement(StockSaleMovement movement)
+{
+    return _repository.ApplySaleStockMovement(movement);
+}
 }
