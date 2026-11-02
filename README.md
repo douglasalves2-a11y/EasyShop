@@ -192,7 +192,7 @@ A utilização conjunta de SQLite e LiteDB permite explorar as diferenças entre
 ## 👨‍💻 Desenvolvedores
 
 👨‍💻 Douglas Henrique Alves
-👨‍💻 
+👨‍💻 Miller Carlos
 
 Projeto acadêmico desenvolvido para aplicação prática de conceitos de:
 
